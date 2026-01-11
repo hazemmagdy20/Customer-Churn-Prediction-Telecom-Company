@@ -1,0 +1,131 @@
+Telecom Company.
+
+Goal: Predict if the Customer will leave (Churn) or no.
+
+So that If:
+        Churn = Yes  --> Customer will leave.
+        Churn = No   --> Customer will continue.
+        
+Each column of Dataset represents a possible reason why a client might leave or prefer.
+
+The Dataset columns are:
+
+1️⃣ Customer ID
+    Meaning: A unique ID for each customer
+    Why is it there? For tracking purposes only.
+    ML? ❌ Removed (has no predictive power)
+
+2️⃣ Gender (Male / Female)
+    Why is it there? Some companies analyze behavior based on gender.
+    ML? Demographic Feature
+    Its impact is often weak.  
+
+3️⃣ Senior Citizen
+    0 = Not very old
+    1 = Senior citizen
+    Why is this important?
+        Older adults may: Prefer stability
+        Or conversely: Use less technology
+    It's a Binary numerical feature
+
+4️⃣ Partner
+    Is the client married/with a partner?
+    Business logic:
+        Those with a partner are generally more stable.
+        Churn relat
+
+5️⃣ Dependents
+    Does he/she have children/dependents?
+    Why?
+        Family = Constant need for support
+        Strong churn signal (sometimes)        
+
+6️⃣ Tenure
+    Number of months the customer has spent with the company
+    One of the strongest features 🔥
+    Logic:
+        Low tenure → High churn
+        Large tenure → Loyal customer
+    Numerical feature (very important)
+
+7️⃣ PhoneService
+    Does he have mobile service? Yes / No
+    Why? A customer who uses fewer services might leave faster.
+
+8️⃣ Multiple Lines
+    Does he have more than one line?
+    Values: Yes / No / No phone service
+    Feature reflects usage level
+
+9️⃣ Internet Service
+    Internet Type: DSL / Fiber optic / No
+    Fiber optic is often:
+        More expensive
+        More problems
+        Higher dataset churn
+
+🔟 Online Security
+    Are you subscribed to the online security add-on?
+    Why?
+        Add-ons = More connection with the company
+        No → Higher churn
+
+1️⃣1️⃣ Online Backup
+    Backup service
+    Same idea: More services = customer stickiness (loyality)
+
+1️⃣2️⃣ Device Protection
+    Device Protection
+    Business: Customer who pays more → Less churn
+
+1️⃣3️⃣ TechSupport
+    Technical Support
+    Very Important Feature
+    No TechSupport → High churn
+
+1️⃣4️⃣ Streaming TV
+    Is Streaming TV being used?
+    Lifestyle feature
+    Reflects usage intensity مدي
+
+1️⃣5️⃣ Streaming Movies
+    Same idea
+    Not a powerful feature on its own
+    But it strengthens the model
+
+1️⃣6️⃣ Contract
+    Contract Type:
+        Month-to-month ❌
+        One year
+        Two year ✅
+    Top churn driver
+    Month-to-month = Very high churn    
+
+1️⃣7️⃣ Paperless Billing
+    Electronic Billing?
+    Related to User Behavior
+    Digital users sometimes churn more
+
+1️⃣8️⃣ Payment Methods
+    Payment Methods:
+        Electronic check ❌
+        Credit card (automatic) ✅
+        Bank transfer
+        Mailed check
+    Electronic check is linked to a high churn
+
+1️⃣9️⃣ Monthly Charges
+    Monthly Bill
+    Logic: High charges → dissatisfaction → churn
+    Numerical
+
+2️⃣0️⃣ Total Charges
+    Total amount paid by the customer
+    Related to:
+        Tenure
+        Monthly Charges
+    Useful but correlated feature
+
+2️⃣1️⃣ Churn (TARGET)
+    Yes / No
+    This is what we're trying to predict
